@@ -1,0 +1,36 @@
+# OpenSpec product spec template
+# Run: openspec propose "product baseline" to generate this via CLI
+# Reference: https://openspec.dev/
+
+id: product-baseline
+title: "Product baseline spec"
+status: proposed
+date: YYYY-MM-DD
+
+summary: |
+  One paragraph describing what this product is and who it's for.
+
+goals:
+  - Goal 1
+  - Goal 2
+
+non_goals:
+  - Not building X
+  - Not building Y
+
+user_types:
+  - name: Primary user
+    description: Who they are and what they need
+  - name: Secondary user
+    description: Who they are and what they need
+
+features:
+  - id: feat-001
+    name: Feature name
+    priority: p0   # p0 = must have, p1 = should have, p2 = nice to have
+    summary: One-line description
+
+constraints:
+  - Budget: free tiers to start
+  - Stack: list your preferences
+  - Timeline: rough target

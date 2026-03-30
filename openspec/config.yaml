@@ -1,0 +1,18 @@
+# OpenSpec config
+# Reference: https://openspec.dev/
+
+version: "1"
+
+project:
+  name: your-project-name
+  description: One-line description of what this project does
+
+specs_dir: openspec/specs
+changes_dir: openspec/changes
+
+# Fields required in every change proposal
+required_change_fields:
+  - scope
+  - acceptance_criteria
+  - test_plan
+  - rollback_notes

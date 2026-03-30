@@ -1,0 +1,35 @@
+# OpenSpec change proposal template
+# Copy this to openspec/changes/[feature-name].yaml
+# Or run: openspec propose "[feature name]"
+# Reference: https://github.com/Fission-AI/OpenSpec/blob/main/docs/cli.md
+
+id: feature-name
+title: "Short human-readable title"
+status: proposed   # proposed | approved | implemented | archived
+issue: "#0"        # GitHub issue number
+date: YYYY-MM-DD
+
+scope: |
+  What this change does. Be explicit about what's in and out of scope.
+  Out of scope: list things you are explicitly NOT doing here.
+
+acceptance_criteria:
+  - Given [context], when [action], then [outcome]
+  - Given [context], when [action], then [outcome]
+
+db_rls_impact:
+  schema_changes: false   # true if any migrations are needed
+  tables_affected: []     # list table names if schema_changes is true
+  rls_updated: false      # true if RLS policies are added/changed
+
+test_plan:
+  e2e: "tests/e2e/[feature].spec.ts"
+  unit: "tests/unit/[module].test.ts"
+  notes: |
+    Describe what the tests cover — happy path, auth paths, edge cases.
+
+rollback_notes: |
+  How to undo this change if it breaks production.
+  Include: revert PR steps + any SQL to run in Supabase dashboard.
+
+risk: low   # low | medium | high
