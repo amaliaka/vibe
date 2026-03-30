@@ -23,9 +23,6 @@ products with AI (OpenCode or any coding agent).
 │   ├── specs/                       ← Product-level specs (validated by CLI)
 │   └── changes/                     ← Per-feature change proposals
 ├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug.yml
-│   │   └── feature.yml
 │   ├── pull_request_template.md
 │   └── workflows/
 │       └── ci.yml                   ← Lint → E2E → Semgrep → SBOM → OpenSpec validate
@@ -63,7 +60,7 @@ git remote set-url origin https://github.com/your-username/my-project
 ```
 
 > **First time?** Read `docs/SETUP.md` — it walks you through connecting
-> GitHub, Supabase, Vercel, OpenCode, OpenSpec, and MCP step by step.
+> GitHub, Supabase, Vercel, OpenCode, OpenSpec, and optional MCP setup.
 
 ### 2. Initialize OpenSpec
 
@@ -79,7 +76,7 @@ Edit `docs/vision.md` with your problem, users, and non-goals.
 Then paste it into OpenCode and say:
 
 > "Based on this vision doc, generate an OpenSpec baseline product spec
-> using `openspec propose` and break it into an epic with 3–5 milestone issues for GitHub."
+> using `openspec propose`, including a clear scope and acceptance criteria."
 
 ### 4. Set up Supabase (cloud dashboard)
 
@@ -114,7 +111,7 @@ You handle: approvals, architecture decisions, production promotion.
 
 ## The three rules
 
-1. **No code without a spec** — Create a markdown spec in `docs/specs/` before implementing
+1. **No code without a spec** — Create an OpenSpec change in `openspec/changes/` before implementing
 2. **No merge with red CI** — All checks must pass (lint, E2E, Semgrep, SBOM)
 3. **No auto-deploy to prod** — You manually promote. Always.
 
@@ -136,7 +133,7 @@ See PLAYBOOK.md → "Project type quick-start" for stack-specific guidance.
 |---|---|---|
 | OpenCode | AI coding agent | MIT |
 | OpenSpec | Spec validation + versioning | MIT |
-| GitHub + Actions | Repo, CI, issues | — |
+| GitHub + Actions | Repo and CI | — |
 | Vercel | Deploy + preview | Managed |
 | Supabase | DB, Auth, APIs | Apache-2.0 |
 | Playwright | E2E testing | Apache-2.0 |

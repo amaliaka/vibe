@@ -1,5 +1,4 @@
 -- Migration: YYYYMMDD_describe_change_here.sql
--- Issue: #
 -- OpenSpec change: openspec/changes/CHANGE_ID.yaml
 
 -- ─── Forward migration ────────────────────────────────────────────────────

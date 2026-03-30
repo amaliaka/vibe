@@ -6,7 +6,6 @@
 id: feature-name
 title: "Short human-readable title"
 status: proposed   # proposed | approved | implemented | archived
-issue: "#0"        # GitHub issue number
 date: YYYY-MM-DD
 
 scope: |

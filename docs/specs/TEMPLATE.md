@@ -1,7 +1,6 @@
 # Spec: [Feature name]
 
 > Status: draft | approved | implemented
-> Issue: #
 > Date: YYYY-MM-DD
 
 ---

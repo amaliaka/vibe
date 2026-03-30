@@ -23,7 +23,7 @@
 2. Find last known good deployment
 3. Click "..." → "Instant Rollback"
 4. Verify production is healthy
-5. File a GitHub issue with: what failed, what we rolled back to, next steps
+5. Record the incident summary: what failed, what we rolled back to, next steps
 
 ## Monitoring
 

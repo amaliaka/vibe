@@ -45,12 +45,11 @@ Create `docs/vision.md` and fill in:
 Then paste the above into OpenCode and say:
 
 > "Based on this vision doc, generate an OpenSpec baseline product spec
-> using `openspec propose` and break it into an epic with 3–5 milestone issues for GitHub."
+> using `openspec propose`, including clear scope and acceptance criteria."
 
 **Output you should have:**
 - `docs/vision.md` committed
 - `openspec/specs/product.yaml` — baseline spec (validated by OpenSpec CLI)
-- Epic issue created in GitHub with milestone issues linked
 
 ---
 
@@ -58,20 +57,20 @@ Then paste the above into OpenCode and say:
 
 **AI generates, you approve.**
 
-For each feature or milestone, prompt:
+For each feature, prompt:
 
-> "For milestone [X], generate user stories with acceptance criteria in the format:
+> "For feature [X], generate user stories with acceptance criteria in the format:
 > As a [user], I want [goal] so that [reason].
 > Acceptance criteria: [testable conditions].
 > Also identify any NFRs: latency targets, SEO needs, data retention."
 
-Review and edit. Then create the GitHub issue using the feature issue template.
+Review and edit. Then capture the approved scope in `openspec/changes/[feature].yaml`.
 
 Also prompt:
 > "Do any of these features need a public API? If so, draft an OpenAPI stub for those routes."
 
 **Output you should have:**
-- GitHub issues with acceptance criteria
+- Approved user stories with acceptance criteria
 - `openspec/changes/[feature].yaml` — one change proposal per feature (run `openspec propose`)
 - Optional: `docs/api.yaml` OpenAPI stub
 
@@ -293,16 +292,11 @@ Use test helpers in tests/e2e/helpers.ts.
 
 ---
 
-## MCP wiring by phase
+## Optional MCP usage by phase
 
 | Phase | MCP server | What it does |
 |---|---|---|
-| Ideation | GitHub MCP | Create epic + milestone issues |
-| Requirements | GitHub MCP | Create feature issues from stories |
-| Implementation | GitHub MCP | Create PRs, link to issues |
 | Implementation | Supabase MCP | Check schema, query RLS status |
-| Deploy | GitHub MCP | Check CI status before promoting |
-| Maintain | GitHub MCP | Query open Dependabot alerts |
 | Maintain | Supabase MCP | Check RLS policy status per table |
 
 **OpenSpec CLI commands used across phases:**

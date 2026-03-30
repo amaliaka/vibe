@@ -2,9 +2,8 @@
 
 What changed and why?
 
-## Linked issue + OpenSpec change
+## OpenSpec change
 
-- Issue: #
 - OpenSpec change: `openspec/changes/`
 
 ## Acceptance criteria

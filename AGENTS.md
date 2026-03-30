@@ -66,7 +66,7 @@ Before writing any code for a new feature:
 - Commit messages: imperative mood, sentence case, under 72 chars
   - Good: `Add article RLS policy for authenticated authors`
   - Bad: `fixed stuff`, `WIP`, `update`
-- PR title must reference the GitHub issue: `feat: [#42] Add article publishing flow`
+- PR title should summarize the scope clearly: `feat: Add article publishing flow`
 - Fill in every section of the PR template — do not leave placeholders
 
 ---
@@ -101,7 +101,7 @@ Do NOT generate code. Output only: issues list, questions, decision points.
 ### build agent
 Used during implementation.
 Role: implement features as described in the OpenSpec change file in `openspec/changes/`.
-Always reference the change filename and linked GitHub issue in the first commit message.
+Always reference the change filename in the first commit message.
 
 ### test agent
 Used during testing phase.

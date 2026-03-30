@@ -199,21 +199,7 @@ fields, then commit it.
 
 ---
 
-## 7. MCP — wire up GitHub and Supabase
-
-MCP servers let OpenCode interact directly with GitHub and Supabase during
-development. Add these to your OpenCode MCP config.
-
-### GitHub MCP
-
-Follow the setup at [github.com/github/github-mcp-server](https://github.com/github/github-mcp-server)
-
-You'll need a GitHub Personal Access Token:
-`GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens`
-
-Scopes needed: `Contents`, `Issues`, `Pull requests`, `Metadata`
-
-### Supabase MCP
+## 7. MCP (optional) — wire up Supabase
 
 Follow the setup at [github.com/supabase/mcp-server-supabase](https://github.com/supabase/mcp-server-supabase)
 
@@ -222,12 +208,6 @@ You'll need your Supabase project ref and service role key from step 2.
 ### Verify MCP is working
 
 In OpenCode, try:
-
-```
-List my open GitHub issues for this repo
-```
-
-If it returns your issues, GitHub MCP is connected. Then try:
 
 ```
 List the tables in my Supabase project
@@ -265,5 +245,4 @@ If it returns your tables, Supabase MCP is connected.
 - [ ] Preview deployment visible for your main branch
 - [ ] `openspec init` run successfully
 - [ ] `opencode auth` completed with your API key
-- [ ] GitHub MCP connected and returning issues
 - [ ] Supabase MCP connected and returning tables
